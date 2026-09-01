@@ -60,7 +60,7 @@ graph LR
 | `tools/` | Custom Tool 通用实现（配置驱动 + 计算列模式） | 骨架 |
 | `prompts/` | 防幻觉提示词模板（脱敏版，含 4 条铁律落地写法） | 骨架 |
 | `mock-api/` | FastAPI 模拟实时数据接口 | 骨架 |
-| `docs/` | 架构设计、踩坑记录 | 骨架 |
+| `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01 |
 
 ## 快速开始
 
@@ -80,6 +80,14 @@ cd .. && docker compose up -d
 ```
 
 > ⚠️ 骨架阶段：mock-api / tools / prompts 正在逐步实装，当前以方法论与设计文档为主。Star 关注，持续更新。
+
+## 案例库（Case Studies）
+
+方法论不能只讲一遍——用真实战场故事证明它能落地：
+
+| 案例 | 主题 | 链接 |
+|---|---|---|
+| 01 · 火电报表 N+1 查询优化 | 存量系统性能改造：四张老报表 SQL 从 ~3000 次/张降到 1~2 次，业务零改动 | [docs/case-studies/01-report-query-optimization.md](docs/case-studies/01-report-query-optimization.md) |
 
 ## 脱敏声明
 

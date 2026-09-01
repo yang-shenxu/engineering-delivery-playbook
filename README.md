@@ -59,7 +59,7 @@ graph LR
 |------|------|------|
 | `tools/` | Custom Tool 通用实现（配置驱动 + 计算列模式） | 骨架 |
 | `prompts/` | 防幻觉提示词模板（脱敏版，含 4 条铁律落地写法） | 骨架 |
-| `mock-api/` | FastAPI 模拟实时数据接口 | 骨架 |
+| `mock-api/` | FastAPI 模拟实时数据接口（测点/时序/报表 3 类 REST，含 N+1 vs 批量基准） | ✅ 已实装 |
 | `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01-03 |
 
 ## 快速开始
@@ -79,7 +79,7 @@ cd .. && docker compose up -d
 # 4. 导入 prompts/ 模板 → 配置 tools/ → 开聊
 ```
 
-> ⚠️ 骨架阶段：mock-api / tools / prompts 正在逐步实装，当前以方法论与设计文档为主。Star 关注，持续更新。
+> ⚠️ 骨架阶段：tools / prompts 正在逐步实装；mock-api 已可运行（见 [mock-api/README.md](mock-api/README.md)）。Star 关注，持续更新。
 
 ## 案例库（Case Studies）
 
@@ -97,7 +97,7 @@ cd .. && docker compose up -d
 
 ## 路线图
 
-- [ ] mock-api：FastAPI 模拟接口（测点/时段/指标 3 类 REST 接口）
+- [x] mock-api：FastAPI 模拟接口（测点/时段/指标 3 类 REST 接口，含 N+1 vs 批量性能基准）
 - [ ] tools：通用报表工具完整实现（配置驱动 + 计算列）
 - [ ] prompts：4 条防幻觉铁律的提示词模板
 - [ ] 演示 GIF：实时查数 → 报表问答 → 知识库问答

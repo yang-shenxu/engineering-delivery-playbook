@@ -1,0 +1,22 @@
+# 日运行摘要（示例配置 2）
+# 同一执行器、不同配置 → 完全不同的报表，无需改任何代码
+# 统计口径说明：日累计发电量 = 日均负荷 × 24h（MWh），非采样点求和
+report:
+  id: daily_summary
+  title: 日运行摘要
+  description: 按测点输出日均负荷、峰值/谷值负荷率、峰谷差率（计算列模式集中演示）
+
+  columns:
+    - { key: point,        type: point_name, label: "测点" }
+    - { key: avg,          type: agg, agg: avg, label: "日均负荷",     unit: "MW" }
+    - { key: max,          type: agg, agg: max, label: "日峰值",       unit: "MW" }
+    - { key: min,          type: agg, agg: min, label: "日谷值",       unit: "MW" }
+    - { key: daily_energy, type: calc, formula: "avg * 24", label: "日累计发电量", unit: "MWh" }
+    - { key: peak_factor,  type: calc, formula: "max / capacity * 100", label: "峰值负荷率", unit: "%" }
+    - { key: spread_rate,  type: calc, formula: "(max - min) / capacity * 100", label: "峰谷差率", unit: "%" }
+
+  rows:
+    - { point: point_001, name: 1号机组, capacity: 1000 }
+    - { point: point_002, name: 2号机组, capacity: 1000 }
+    - { point: point_003, name: 3号机组, capacity: 660 }
+    - { point: point_004, name: 4号机组, capacity: 660 }

@@ -1,0 +1,22 @@
+# 月度生产报表（示例配置 1）
+# 配置驱动的体现：新增报表 = 新增 YAML，零代码改动
+report:
+  id: monthly_report
+  title: 月度生产报表
+  description: 按测点输出月均负荷、月最高/最低、负荷率（派生指标）
+
+  # 列定义：表头 + 统计维度（type: point_name=测点列, agg=聚合列, calc=计算列）
+  columns:
+    - { key: point,       type: point_name, label: "测点" }
+    - { key: avg,         type: agg, agg: avg,   label: "月均负荷", unit: "MW" }
+    - { key: max,         type: agg, agg: max,   label: "月最高",   unit: "MW" }
+    - { key: min,         type: agg, agg: min,   label: "月最低",   unit: "MW" }
+    - { key: load_factor, type: calc, formula: "avg / capacity * 100", label: "负荷率", unit: "%" }
+
+  # 行定义：每行一个测点；capacity 等静态属性供计算列引用
+  rows:
+    - { point: point_001, name: 1号机组, capacity: 1000 }
+    - { point: point_002, name: 2号机组, capacity: 1000 }
+    - { point: point_003, name: 3号机组, capacity: 660 }
+    - { point: point_004, name: 4号机组, capacity: 660 }
+    - { point: point_005, name: 5号机组, capacity: 330 }

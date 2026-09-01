@@ -44,6 +44,10 @@ class QueryEngine:
         self._simulate_latency()
         return {pid: self.dataset[pid].values_between(start, end) for pid in point_ids}
 
+    def fetch_bulk(self, point_ids: List[str], start: datetime, end: datetime) -> Dict[str, List[tuple]]:
+        """公开批量取数接口：一次查询返回多测点时序数据（供报表工具等消费）。"""
+        return self._db_query_bulk(point_ids, start, end)
+
     # ---------- 报表聚合（二维数组 + 中文表头，对齐真实接口规范） ----------
 
     @staticmethod

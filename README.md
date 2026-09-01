@@ -1,8 +1,8 @@
-# dify-agent-playbook
+# engineering-delivery-playbook
 
-> 一行提示词接入新报表：可私有化部署的 Dify 多工具 AI Agent 实战指南（脱敏版）
+> 从业务痛点 → 技术方案 → 现场交付：工业场景工程交付方法论、案例库与可复现代码骨架（脱敏版）
 
-基于工业运维场景 AI 智能问答系统的真实落地经验（30+ 轮提示词迭代、100+ 条测试用例），提炼出可复用的方法论与代码骨架：把分散的实时数据接口、业务系统与企业知识库，统一为自然语言入口。
+基于工业场景真实落地经验提炼的可复用方法论与代码骨架：AI 智能问答（Dify 多工具 Agent，30+ 轮提示词迭代、100+ 条测试用例）、存量报表性能改造、无人值守数据管道——把分散的实时数据接口、业务系统与企业知识库，统一为自然语言入口。
 
 ## 三大核心方法论（仓库的魂）
 
@@ -66,8 +66,8 @@ graph LR
 
 ```bash
 # 1. 克隆
-git clone https://github.com/yang-shenxu/dify-agent-playbook.git
-cd dify-agent-playbook
+git clone https://github.com/yang-shenxu/engineering-delivery-playbook.git
+cd engineering-delivery-playbook
 
 # 2. 启动 mock 数据接口（FastAPI）
 cd mock-api && pip install -r requirements.txt

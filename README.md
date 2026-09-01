@@ -60,7 +60,7 @@ graph LR
 | `tools/` | Custom Tool 通用实现（配置驱动 + 计算列模式） | 骨架 |
 | `prompts/` | 防幻觉提示词模板（脱敏版，含 4 条铁律落地写法） | 骨架 |
 | `mock-api/` | FastAPI 模拟实时数据接口 | 骨架 |
-| `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01 |
+| `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01、02 |
 
 ## 快速开始
 
@@ -88,6 +88,7 @@ cd .. && docker compose up -d
 | 案例 | 主题 | 链接 |
 |---|---|---|
 | 01 · 火电报表 N+1 查询优化 | 存量系统性能改造：四张老报表 SQL 从 ~3000 次/张降到 1~2 次，业务零改动 | [docs/case-studies/01-report-query-optimization.md](docs/case-studies/01-report-query-optimization.md) |
+| 02 · 火电运维 AI 问答助手 | AI 产品从 0 到 1 + 内网无 GPU 约束下微主机现场私有化交付：工具收敛 16→4、提示词 30+ 轮、100+ 测试用例 | [docs/case-studies/02-xiaou-ai-assistant.md](docs/case-studies/02-xiaou-ai-assistant.md) |
 
 ## 脱敏声明
 

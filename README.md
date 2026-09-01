@@ -58,7 +58,7 @@ graph LR
 | 目录 | 内容 | 状态 |
 |------|------|------|
 | `tools/` | Custom Tool 通用实现（配置驱动 + 计算列模式，报表=YAML 零代码扩展） | ✅ 已实装 |
-| `prompts/` | 防幻觉提示词模板（脱敏版，含 4 条铁律落地写法） | 骨架 |
+| `prompts/` | 防幻觉提示词资产库（4 条铁律方法论 + 3 份模板 + 静态校验器 validator.py） | ✅ 已实装 |
 | `mock-api/` | FastAPI 模拟实时数据接口（测点/时序/报表 3 类 REST，含 N+1 vs 批量基准） | ✅ 已实装 |
 | `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01-03 |
 
@@ -79,7 +79,7 @@ cd .. && docker compose up -d
 # 4. 导入 prompts/ 模板 → 配置 tools/ → 开聊
 ```
 
-> ⚠️ 骨架阶段：prompts 正在实装；mock-api 与 tools/report_tool 均已可运行（见对应 README）。Star 关注，持续更新。
+> ✅ 全部代码块已实装：mock-api / tools/report_tool / prompts 均可运行（见各子目录 README）。Star 关注，持续更新。
 
 ## 案例库（Case Studies）
 
@@ -99,7 +99,7 @@ cd .. && docker compose up -d
 
 - [x] mock-api：FastAPI 模拟接口（测点/时段/指标 3 类 REST 接口，含 N+1 vs 批量性能基准）
 - [x] tools：通用报表工具完整实现（配置驱动 + 计算列，见 [tools/report_tool](tools/report_tool/README.md)）
-- [ ] prompts：4 条防幻觉铁律的提示词模板
+- [x] prompts：防幻觉四铁律方法论 + 3 份模板 + validator.py 静态校验器（见 [prompts/README.md](prompts/README.md)）
 - [ ] 演示 GIF：实时查数 → 报表问答 → 知识库问答
 - [ ] 博客联动：《把 SQL 从 2700 次降到 4 次》《RAG 防幻觉实战》
 

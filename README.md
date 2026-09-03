@@ -91,6 +91,14 @@ cd .. && docker compose up -d
 | 02 · 火电运维 AI 问答助手 | AI 产品从 0 到 1 + 内网无 GPU 约束下微主机现场私有化交付：工具收敛 16→4、提示词 30+ 轮、100+ 测试用例 | [docs/case-studies/02-xiaou-ai-assistant.md](docs/case-studies/02-xiaou-ai-assistant.md) |
 | 03 · 煤质数据自动采集管道 | 双 FTP 异构数据源 → 时序库的无人值守 ETL：双编码/非标 LIST/复杂口径 5 重约束，2 天交付 + 零编码现场部署 | [docs/case-studies/03-coal-data-pipeline.md](docs/case-studies/03-coal-data-pipeline.md) |
 
+## 技术博客
+
+方法论不只躺在仓库里——也写成面向社区的文章，欢迎交流：
+
+| 文章 | 主题 | 链接 |
+|---|---|---|
+| 01 · 把 SQL 从 2700 次降到 4 次 | 存量报表 N+1 手术：批量 IN + 内存 Map 索引，业务零改动，附可复现 Demo | [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md) |
+
 ## 脱敏声明
 
 本仓库为**方法论与通用实现的脱敏重写版**，不含任何真实业务数据、企业代码或未公开接口信息。所有数据均为模拟占位，仅用于演示架构与方法。
@@ -101,7 +109,8 @@ cd .. && docker compose up -d
 - [x] tools：通用报表工具完整实现（配置驱动 + 计算列，见 [tools/report_tool](tools/report_tool/README.md)）
 - [x] prompts：防幻觉四铁律方法论 + 3 份模板 + validator.py 静态校验器（见 [prompts/README.md](prompts/README.md)）
 - [ ] 演示 GIF：实时查数 → 报表问答 → 知识库问答
-- [ ] 博客联动：《把 SQL 从 2700 次降到 4 次》《RAG 防幻觉实战》
+- [x] 博客第 1 篇：《把 SQL 从 2700 次降到 4 次——存量报表的 N+1 手术》（见 [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md)）
+- [ ] 博客第 2 篇：《RAG 防幻觉实战：30 轮提示词迭代的 4 条铁律》
 
 ## 许可证
 

@@ -112,6 +112,7 @@ docker compose run --rm verify
 | 01 · 火电报表 N+1 查询优化 | 存量系统性能改造：四张老报表 SQL 从 ~3000 次/张降到 1~2 次，业务零改动 | [docs/case-studies/01-report-query-optimization.md](docs/case-studies/01-report-query-optimization.md) |
 | 02 · 火电运维 AI 问答助手 | AI 产品从 0 到 1 + 内网无 GPU 约束下微主机现场私有化交付：工具收敛 16→4、提示词 30+ 轮、100+ 测试用例 | [docs/case-studies/02-xiaou-ai-assistant.md](docs/case-studies/02-xiaou-ai-assistant.md) |
 | 03 · 煤质数据自动采集管道 | 双 FTP 异构数据源 → 时序库的无人值守 ETL：双编码/非标 LIST/复杂口径 5 重约束，2 天交付 + 零编码现场部署 | [docs/case-studies/03-coal-data-pipeline.md](docs/case-studies/03-coal-data-pipeline.md) |
+| 04 · 计算引擎双写管道升级 | 计算结果旁路同步关系库：v1/v2 方案取舍、同源双容器、两层幂等（确定性 UUID + upsert）、异常隔离不反噬主链路 | [docs/case-studies/04-computing-dual-write.md](docs/case-studies/04-computing-dual-write.md) |
 
 ## 技术博客
 

@@ -61,25 +61,34 @@ graph LR
 | `prompts/` | 防幻觉提示词资产库（4 条铁律方法论 + 3 份模板 + 静态校验器 validator.py） | ✅ 已实装 |
 | `mock-api/` | FastAPI 模拟实时数据接口（测点/时序/报表 3 类 REST，含 N+1 vs 批量基准） | ✅ 已实装 |
 | `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01-03 |
+| 根目录 | `docker-compose.yml` 一键起环境 + `demo.sh` / `demo.ps1` 一键演示 | ✅ 已实装 |
 
-## 快速开始
+## 快速开始（30 秒跑起来）
 
 ```bash
 # 1. 克隆
 git clone https://github.com/yang-shenxu/engineering-delivery-playbook.git
 cd engineering-delivery-playbook
 
-# 2. 启动 mock 数据接口（FastAPI）
-cd mock-api && pip install -r requirements.txt
-uvicorn main:app --port 8018
+# 2. Docker 一键起 mock 数据接口（FastAPI :8018，自动健康检查）
+docker compose up -d --build
 
-# 3. 启动 Dify（Docker Compose）
-cd .. && docker compose up -d
+# 3. 打开接口文档（Swagger UI，可直接点 Try it out）
+open http://localhost:8018/docs
 
-# 4. 导入 prompts/ 模板 → 配置 tools/ → 开聊
+# 4. 一键演示：健康检查 / 测点 / 时序 / 报表（含 batch vs n1 性能对比）
+./demo.sh            # Linux / macOS
+./demo.ps1           # Windows PowerShell
+
+# 5.（可选）全量自检：三件套测试一键跑绿
+docker compose run --rm verify
 ```
 
-> ✅ 全部代码块已实装：mock-api / tools/report_tool / prompts 均可运行（见各子目录 README）。Star 关注，持续更新。
+> 💡 国内网络：构建加 `--build-arg PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple` 走 PyPI 镜像。
+> 💡 不想用 Docker？见 [mock-api/README.md](mock-api/README.md) 的本地 pip 方式（`uvicorn main:app --port 8018`）。
+> 💡 停服务：`docker compose down`。
+
+> ✅ 全部代码块已实装：mock-api / tools/report_tool / prompts 均可运行（见各子目录 README），docker-compose 一键起 + 一键演示 + 一键自检。Star 关注，持续更新。
 
 ## 案例库（Case Studies）
 
@@ -108,6 +117,7 @@ cd .. && docker compose up -d
 - [x] mock-api：FastAPI 模拟接口（测点/时段/指标 3 类 REST 接口，含 N+1 vs 批量性能基准）
 - [x] tools：通用报表工具完整实现（配置驱动 + 计算列，见 [tools/report_tool](tools/report_tool/README.md)）
 - [x] prompts：防幻觉四铁律方法论 + 3 份模板 + validator.py 静态校验器（见 [prompts/README.md](prompts/README.md)）
+- [x] docker-compose：一键起 mock-api + verify 全量自检 + demo.sh / demo.ps1 一键演示
 - [ ] 演示 GIF：实时查数 → 报表问答 → 知识库问答
 - [x] 博客第 1 篇：《把 SQL 从 2700 次降到 4 次——存量报表的 N+1 手术》（见 [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md)）
 - [ ] 博客第 2 篇：《RAG 防幻觉实战：30 轮提示词迭代的 4 条铁律》

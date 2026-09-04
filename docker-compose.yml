@@ -1,0 +1,35 @@
+# 一键演示环境：mock 数据接口（长期服务）+ verify（一次性全量自检）
+#
+# 用法：
+#   启动数据接口      docker compose up -d --build
+#   查看接口文档      http://localhost:8018/docs
+#   全量自检（三件套测试）
+#                    docker compose run --rm verify
+#   停止              docker compose down
+#
+# 国内网络加速构建：
+#   docker compose build --build-arg PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+
+services:
+  mock-api:
+    build: ./mock-api
+    container_name: e2e-playbook-mock-api
+    ports:
+      - "8018:8018"
+    restart: unless-stopped
+
+  # 一次性自检容器：跑 mock-api / tools/report_tool / prompts 全部测试
+  # 用 docker compose run --rm verify 调用（默认 compose up 不会启动本服务）
+  verify:
+    build: ./mock-api
+    profiles: ["verify"]
+    working_dir: /repo
+    volumes:
+      - .:/repo
+    depends_on:
+      mock-api:
+        condition: service_healthy
+    command: >
+      sh -c "cd /repo/mock-api && python -m pytest tests -q &&
+             echo '--- tools/report_tool ---' && cd /repo/tools/report_tool && python -m pytest tests -q &&
+             echo '--- prompts ---' && cd /repo/prompts && python -m pytest tests -q"

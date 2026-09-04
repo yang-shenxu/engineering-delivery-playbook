@@ -121,6 +121,7 @@ docker compose run --rm verify
 |---|---|---|
 | 01 · 把 SQL 从 2700 次降到 4 次 | 存量报表 N+1 手术：批量 IN + 内存 Map 索引，业务零改动，附可复现 Demo | [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md) |
 | 02 · AI 问答不再"一本正经地胡说" | 30 轮提示词迭代沉淀的防幻觉 4 条铁律 + validator.py 静态校验器（把规则变成 CI 检查） | [blog/02-rag-anti-hallucination.md](blog/02-rag-anti-hallucination.md) |
+| 03 · 我把 AI 助手管成一个 4 人团队 | 多项目实战沉淀的 AI 协作治理体系：三条原则 + 通用 4 角色 + 7 条人机边界红线 + 一键接入/泄漏扫描脚本 | [blog/03-ai-collab-4-roles.md](blog/03-ai-collab-4-roles.md) |
 
 ## 脱敏声明
 

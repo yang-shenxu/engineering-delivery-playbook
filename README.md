@@ -107,6 +107,7 @@ docker compose run --rm verify
 | 文章 | 主题 | 链接 |
 |---|---|---|
 | 01 · 把 SQL 从 2700 次降到 4 次 | 存量报表 N+1 手术：批量 IN + 内存 Map 索引，业务零改动，附可复现 Demo | [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md) |
+| 02 · AI 问答不再"一本正经地胡说" | 30 轮提示词迭代沉淀的防幻觉 4 条铁律 + validator.py 静态校验器（把规则变成 CI 检查） | [blog/02-rag-anti-hallucination.md](blog/02-rag-anti-hallucination.md) |
 
 ## 脱敏声明
 
@@ -120,7 +121,8 @@ docker compose run --rm verify
 - [x] docker-compose：一键起 mock-api + verify 全量自检 + demo.sh / demo.ps1 一键演示
 - [ ] 演示 GIF：实时查数 → 报表问答 → 知识库问答
 - [x] 博客第 1 篇：《把 SQL 从 2700 次降到 4 次——存量报表的 N+1 手术》（见 [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md)）
-- [ ] 博客第 2 篇：《RAG 防幻觉实战：30 轮提示词迭代的 4 条铁律》
+- [x] 博客第 2 篇：《AI 问答不再"一本正经地胡说"：30 轮提示词迭代沉淀 4 条防幻觉铁律》（见 [blog/02-rag-anti-hallucination.md](blog/02-rag-anti-hallucination.md)）
+- [ ] 博客第 3 篇：《Dify Custom Tool 设计模式：一行提示词接入新报表》
 
 ## 许可证
 

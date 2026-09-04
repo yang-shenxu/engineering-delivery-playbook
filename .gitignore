@@ -29,6 +29,9 @@ dist/
 *.log
 logs/
 
+# 泄漏扫描黑名单（公司/项目专属词，本地维护绝不提交）
+ai-collab/scripts/blocklist.txt
+
 # 系统
 .DS_Store
 Thumbs.db

@@ -59,6 +59,7 @@ graph LR
 |------|------|------|
 | `tools/` | Custom Tool 通用实现（配置驱动 + 计算列模式，报表=YAML 零代码扩展） | ✅ 已实装 |
 | `prompts/` | 防幻觉提示词资产库（4 条铁律方法论 + 3 份模板 + 静态校验器 validator.py） | ✅ 已实装 |
+| `ai-collab/` | AI 协作治理体系（通用 4 角色 subagent + 人机边界红线 + 接入/审查 SOP + 一键接入脚本 + 泄漏扫描校验器） | ✅ 已实装 |
 | `mock-api/` | FastAPI 模拟实时数据接口（测点/时序/报表 3 类 REST，含 N+1 vs 批量基准） | ✅ 已实装 |
 | `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01-03 |
 | 根目录 | `docker-compose.yml` 一键起环境 + `demo.sh` / `demo.ps1` 一键演示 | ✅ 已实装 |
@@ -88,7 +89,19 @@ docker compose run --rm verify
 > 💡 不想用 Docker？见 [mock-api/README.md](mock-api/README.md) 的本地 pip 方式（`uvicorn main:app --port 8018`）。
 > 💡 停服务：`docker compose down`。
 
-> ✅ 全部代码块已实装：mock-api / tools/report_tool / prompts 均可运行（见各子目录 README），docker-compose 一键起 + 一键演示 + 一键自检。Star 关注，持续更新。
+> ✅ 全部代码块已实装：mock-api / tools/report_tool / prompts / ai-collab 均可运行（见各子目录 README），docker-compose 一键起 + 一键演示 + 一键自检。Star 关注，持续更新。
+
+## AI 协作：人和 AI 的分工怎么定
+
+提示词解决"单次对话质量"（见 `prompts/`），[ai-collab/](ai-collab/) 解决"长期协作秩序"：
+
+| 资产 | 一句话 |
+|---|---|
+| 通用 4 角色 | `@architect` / `@code-reviewer` / `@doc-keeper` / `@requirement-clarifier` 全局共享、跨项目零修改复用 |
+| 人机边界红线 | AI 只做代码层：不打包、不部署、不执行 SQL、不确定必标"待确认"（7 条铁律） |
+| 审查 SOP | 独立审查官七步流程 + 六维框架——写代码的 AI 不审查自己的代码 |
+| 一键接入 | `bash ai-collab/scripts/install.sh <项目路径>` 15 分钟接入任意新项目 |
+| 泄漏扫描 | `check_roles.py` 提交前自动拦截公司/项目信息进入公开仓库 |
 
 ## 案例库（Case Studies）
 
@@ -118,11 +131,13 @@ docker compose run --rm verify
 - [x] mock-api：FastAPI 模拟接口（测点/时段/指标 3 类 REST 接口，含 N+1 vs 批量性能基准）
 - [x] tools：通用报表工具完整实现（配置驱动 + 计算列，见 [tools/report_tool](tools/report_tool/README.md)）
 - [x] prompts：防幻觉四铁律方法论 + 3 份模板 + validator.py 静态校验器（见 [prompts/README.md](prompts/README.md)）
+- [x] ai-collab：AI 协作治理体系（通用 4 角色 + 红线 + SOP + install.sh + check_roles.py 泄漏扫描，见 [ai-collab/README.md](ai-collab/README.md)）
 - [x] docker-compose：一键起 mock-api + verify 全量自检 + demo.sh / demo.ps1 一键演示
 - [ ] 演示 GIF：实时查数 → 报表问答 → 知识库问答
 - [x] 博客第 1 篇：《把 SQL 从 2700 次降到 4 次——存量报表的 N+1 手术》（见 [blog/01-n1-to-batch-report-optimization.md](blog/01-n1-to-batch-report-optimization.md)）
 - [x] 博客第 2 篇：《AI 问答不再"一本正经地胡说"：30 轮提示词迭代沉淀 4 条防幻觉铁律》（见 [blog/02-rag-anti-hallucination.md](blog/02-rag-anti-hallucination.md)）
-- [ ] 博客第 3 篇：《Dify Custom Tool 设计模式：一行提示词接入新报表》
+- [x] 博客第 3 篇：《我把 AI 助手管成一个 4 人团队：多项目实战沉淀的 AI 协作治理体系》（见 [blog/03-ai-collab-4-roles.md](blog/03-ai-collab-4-roles.md)）
+- [ ] 博客第 4 篇：《Dify Custom Tool 设计模式：一行提示词接入新报表》
 
 ## 许可证
 

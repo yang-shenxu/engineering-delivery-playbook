@@ -4,6 +4,8 @@
 
 基于工业场景真实落地经验提炼的可复用方法论与代码骨架：AI 智能问答（Dify 多工具 Agent，30+ 轮提示词迭代、100+ 条测试用例）、存量报表性能改造、无人值守数据管道——把分散的实时数据接口、业务系统与企业知识库，统一为自然语言入口。
 
+![demo](docs/img/demo.gif)
+
 ## 三大核心方法论（仓库的魂）
 
 ### 1. 防幻觉铁律（RAG 问答的命门）
@@ -67,8 +69,9 @@ graph LR
 ## 快速开始（30 秒跑起来）
 
 ```bash
-# 1. 克隆
+# 1. 克隆（国内网络可用 Gitee 镜像）
 git clone https://github.com/yang-shenxu/engineering-delivery-playbook.git
+# git clone https://gitee.com/yang-shenxu/engineering-delivery-playbook.git
 cd engineering-delivery-playbook
 
 # 2. Docker 一键起 mock 数据接口（FastAPI :8018，自动健康检查）

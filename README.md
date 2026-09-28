@@ -128,7 +128,7 @@ docker compose run --rm verify
 | 02 · AI 问答不再"一本正经地胡说" | 30 轮提示词迭代沉淀的防幻觉 4 条铁律 + validator.py 静态校验器（把规则变成 CI 检查） | [掘金](https://juejin.cn/post/7682986422115909675) · [源稿](blog/02-rag-anti-hallucination.md) |
 | 03 · 我把 AI 助手管成一个 4 人团队 | 多项目实战沉淀的 AI 协作治理体系：三条原则 + 通用 4 角色 + 7 条人机边界红线 + 一键接入/泄漏扫描脚本 | [掘金](https://juejin.cn/post/7683877734305300522) · [源稿](blog/03-ai-collab-4-roles.md) |
 | 04 · Dify Custom Tool 设计模式 | 配置驱动的报表工具：一张报表=YAML、formula 白名单计算列、一行提示词接入新报表 | [掘金](https://juejin.cn/post/7685326291902234666) · [源稿](blog/04-custom-tool-design-pattern.md) |
-| 05 · 5 次"本地全绿、生产失效"教会我的事 | 个人承接外部项目的交付 SOP：九阶段流程 + 三道闸门 + 十条工程纪律 + 5 类踩坑对策 | [blog/05-delivery-sop.md](blog/05-delivery-sop.md) · 全文：[docs/delivery-sop.md](docs/delivery-sop.md) |
+| 05 · 5 次"本地全绿、生产失效"教会我的事 | 个人承接外部项目的交付 SOP：九阶段流程 + 三道闸门 + 十条工程纪律 + 5 类踩坑对策 | [掘金](https://juejin.cn/post/7690388362721099818) · [源稿](blog/05-delivery-sop.md) · 全文：[docs/delivery-sop.md](docs/delivery-sop.md) |
 
 ## 脱敏声明
 

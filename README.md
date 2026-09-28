@@ -62,6 +62,7 @@ graph LR
 | `tools/` | Custom Tool 通用实现（配置驱动 + 计算列模式，报表=YAML 零代码扩展） | ✅ 已实装 |
 | `prompts/` | 防幻觉提示词资产库（4 条铁律方法论 + 3 份模板 + 静态校验器 validator.py） | ✅ 已实装 |
 | `ai-collab/` | AI 协作治理体系（通用 4 角色 subagent + 人机边界红线 + 接入/审查 SOP + 一键接入脚本 + 泄漏扫描校验器） | ✅ 已实装 |
+| `docs/delivery-sop.md` | **项目交付流程 SOP**：个人承接外部项目的九阶段流程 + 三道闸门 + 十条工程纪律 + 5 类标准模板 + 五类踩坑对策（源自一次真实市级平台支付模块交付，4 周全程） | ✅ 已实装 |
 | `mock-api/` | FastAPI 模拟实时数据接口（测点/时序/报表 3 类 REST，含 N+1 vs 批量基准） | ✅ 已实装 |
 | `docs/` | 架构设计、踩坑记录、案例库（Case Studies） | ✅ 已含案例 01-03 |
 | 根目录 | `docker-compose.yml` 一键起环境 + `demo.sh` / `demo.ps1` 一键演示 | ✅ 已实装 |

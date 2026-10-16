@@ -117,6 +117,7 @@ docker compose run --rm verify
 | 02 · 火电运维 AI 问答助手 | AI 产品从 0 到 1 + 内网无 GPU 约束下微主机现场私有化交付：工具收敛 16→4、提示词 30+ 轮、100+ 测试用例 | [docs/case-studies/02-xiaou-ai-assistant.md](docs/case-studies/02-xiaou-ai-assistant.md) |
 | 03 · 煤质数据自动采集管道 | 双 FTP 异构数据源 → 时序库的无人值守 ETL：双编码/非标 LIST/复杂口径 5 重约束，2 天交付 + 零编码现场部署 | [docs/case-studies/03-coal-data-pipeline.md](docs/case-studies/03-coal-data-pipeline.md) |
 | 04 · 计算引擎双写管道升级 | 计算结果旁路同步关系库：v1/v2 方案取舍、同源双容器、两层幂等（确定性 UUID + upsert）、异常隔离不反噬主链路 | [docs/case-studies/04-computing-dual-write.md](docs/case-studies/04-computing-dual-write.md) |
+| 05 · 停车消费券外挂式交付 | 五条硬约束（外挂式/三方对接/硬截止/生产库只读/甲方资产）下的完整交付：立项→26 天首发→国庆活动运营→17 天迭代，48 人日、5 次换包零事故、4 轮复核挖 4 条上线级缺陷 | [docs/case-studies/05-parking-coupon-delivery.md](docs/case-studies/05-parking-coupon-delivery.md) |
 
 ## 技术博客
 

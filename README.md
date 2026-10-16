@@ -131,6 +131,7 @@ docker compose run --rm verify
 | 04 · Dify Custom Tool 设计模式 | 配置驱动的报表工具：一张报表=YAML、formula 白名单计算列、一行提示词接入新报表 | [掘金](https://juejin.cn/post/7685326291902234666) · [源稿](blog/04-custom-tool-design-pattern.md) |
 | 05 · 5 次"本地全绿、生产失效"教会我的事 | 个人承接外部项目的交付 SOP：九阶段流程 + 三道闸门 + 十条工程纪律 + 5 类踩坑对策 | [掘金](https://juejin.cn/post/7690388362721099818) · [源稿](blog/05-delivery-sop.md) · 全文：[docs/delivery-sop.md](docs/delivery-sop.md) |
 | 06 · 硬截止项目不赌命：三道"闸门" | 交付流程的强制刹车机制：决策门（口径不锁定不开工）+ 就绪门（一笔真实小额打穿）+ 放量门（异常不清零先回滚），附假期窗口排期冷知识 | [掘金](https://juejin.cn/post/7694481800701952046) · [源稿](blog/06-three-gates.md) |
+| 07 · 交付了 ≠ 生效了 | 比"本地全绿"更高一级的流程层坑：一条修复指令台账误记 3 天"已执行"实未执行、配置键名/落点双错静默失效；复核三到现场 + 未上线定时任务必须可关 | [掘金](https://juejin.cn/post/7696917635670753315) · [源稿](blog/07-delivered-is-not-effective.md) |
 
 ## 脱敏声明
 
